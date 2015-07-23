@@ -82,6 +82,8 @@ var schedule = [
 ]
 
 var list = document.querySelector("#schedule");
+var track1CheckBox = document.querySelector("#show-track-1");
+var track2CheckBox = document.querySelector("#show-track-2");
 
 function createSessionElement(session) {
 	var li = document.createElement("li");
@@ -99,11 +101,20 @@ function displaySchedule() {
 	clearList();
 	var li;
 	for (var i = 0; i < schedule.length; i++) {
-		li = createSessionElement(schedule[i]);
-		list.appendChild(li);
+		var tracks = schedule[i].tracks;
+		
+		var isCurrentTrack = 
+		((track1CheckBox.checked && tracks.indexOf(1) >= 0) ||
+		(track2CheckBox.checked && tracks.indexOf(2) >= 0));
+		
+		if (isCurrentTrack) {
+			li = createSessionElement(schedule[i]);
+			list.appendChild(li);
+		}
 	}
 }
 
 displaySchedule();
 
-
+track1CheckBox.addEventListener("click", displaySchedule, false);
+track2CheckBox.addEventListener("click", displaySchedule, false);
