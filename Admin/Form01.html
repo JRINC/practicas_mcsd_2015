@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title></title>
+		<style>
+			button {
+				padding: .5rem;
+			}
+			
+			input {
+				/*display: block;
+				padding: .5rem;
+				width: 120;
+				box-sizing: border-box;*/
+			}
+			
+			input:invalid {
+				background-color: #f9b2b2;
+				outline: none; 
+			}
+			
+			input:valid {
+				background-color: lightgreen;
+				outline: none; 
+			}
+		</style>
+	</head>
+	<body>
+		<form id="registration-form" method="post" action="/registration/new" id="register">
+			<fieldset>
+				<legend>Form 01</legend>
+				<select>
+					<optgroup label="European">
+						<option value="volvo">Volvo</option>
+						<option value="audi">Audi</option>
+					</optgroup>
+					<optgroup label="American">
+						<option value="chryler">Chryler</option>
+						<option value="ford">Ford</option>
+					</optgroup>
+				</select>
+				<br/>
+				<br/>
+				<label>First Name</label>
+				<br/>
+				<input id="FirstName" name="FirstName" type="text"  placeholder="First Name" />
+				<br/>
+				<label>Last Name</label>
+				<br/>
+				<input id="LastName" name="LastName" type="text"  placeholder="Last Name" />
+				<br/>
+				<label>E-mail</label>
+				<br/>
+				<input id="Email" name="Email" type="email"  placeholder="E-mail" />
+				<br/>
+				<label>Password</label>
+				<br/>
+				<input id="Password" name="Password" type="password"  placeholder="Password" />
+				<br/>
+				<label>Confirm Password</label>
+				<br/>
+				<input id="ConfirmPassword" name="ConfirmPassword" type="password"  placeholder="Confirm Password" />
+				<br/>
+				<label>Website URL</label>
+				<br/>
+				<input id="WebsiteUrl" name="WebsiteUrl" type="url"  placeholder="Website URL" />
+				<br/>
+				<label>Percentage</label>
+				<br/>
+				<input id="percentage" name="percentage" type="number" required min=0 max=100 title="Un numero entre 1 y 100." />
+				<br/>
+				<label>Order reference</label>
+				<br/>
+				<input id="orderRef" name="orderRef" type="text" required pattern="[0-9]{2}[A-Z]{3}" title="Patron: 99AAA." />
+				<br/>
+				<br/>
+				<button type="submit" >Enviar</button> <!--onclick="javascript:hola();"-->
+			</fieldset>
+		</form>
+		
+		<script src="../scripts/register.js"></script>
+	</body>	
+</html>
