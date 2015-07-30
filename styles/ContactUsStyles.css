@@ -42,7 +42,7 @@ input[type="submit"] {
 	width: 200px;
 }
 
-nav {
+/*nav {
 	background-color: #1d1d1d;
 	line-height: 6rem;
 	font-size: 1.7rem;
@@ -57,4 +57,13 @@ nav a {
 
 nav a:hover {
 	background: green;
+}*/
+
+ul {
+	display: inline;
+}
+
+.speakers li .name {
+	text-align: center;
+	display: block;
 }
